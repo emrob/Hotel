@@ -46,6 +46,15 @@ public class Hotel {
 
     }
 
+    public int checkInForNumberOfNIghts(){
+        bedroom.addGuest(guest);
+        bedroom.setNumOfNights(3);
+        return bedroom.getNumOfNights();
+
+    }
+
+
+
 
 }
 

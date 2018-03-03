@@ -55,4 +55,9 @@ public class HotelTest {
         assertEquals("Rosemary", hotel.findGuestNameinRoom());
     }
 
+    @Test
+    public void testCheckNumofNights(){
+        assertEquals(3, hotel.checkInForNumberOfNIghts());
+    }
+
 }
