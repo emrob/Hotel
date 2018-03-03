@@ -2,13 +2,15 @@ public class Bedroom extends Room {
 
     private int nightlyRate;
     private int numOfNights;
+    private String type;
 
 
 
-    public Bedroom(int roomNumber, int capacity, int nightlyRate, int numOfNights){
+    public Bedroom(int roomNumber, int capacity, int nightlyRate, int numOfNights, String type){
            super(roomNumber, capacity);
            this.nightlyRate = nightlyRate;
            this.numOfNights = numOfNights;
+           this.type = type;
     }
 
     public int getNightlyRate() {
@@ -27,4 +29,9 @@ public class Bedroom extends Room {
         this.numOfNights = numOfNights;
     }
 
+
+
+    public String getType() {
+        return this.type;
+    }
 }
