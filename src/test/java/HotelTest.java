@@ -13,21 +13,29 @@ public class HotelTest {
     Bedroom bedroom2;
 //    Bedroom bedroom3;
     ArrayList<Bedroom> availableBedrooms;
-
+    ArrayList<DiningRoom> diningRooms;
+    DiningRoom diningRoomBuffet;
+    DiningRoom fineDiningRoom;
 //    ArrayList<ConferenceRoom> conferenceRoom;
-//    ArrayList<DiningRoom> diningRoom;
+//
 
 
     @Before
     public void setup(){
         guest = new Guest("Rosemary");
-
         bedroom1 = new Bedroom(101, 2, 45, 1, "double");
         bedroom2 = new Bedroom(105, 1, 30, 1, "single");
         availableBedrooms = new ArrayList<>();
         availableBedrooms.add(bedroom1);
         availableBedrooms.add(bedroom2);
-        hotel = new Hotel(guest, bedroom1,availableBedrooms);
+        diningRoomBuffet = new DiningRoom(1, 100);
+        fineDiningRoom = new DiningRoom(10, 40);
+        diningRooms = new ArrayList<>();
+        diningRooms.add(diningRoomBuffet);
+        diningRooms.add(fineDiningRoom);
+
+        hotel = new Hotel(guest, bedroom1,availableBedrooms,fineDiningRoom, diningRooms);
+
 
     }
 
@@ -38,10 +46,13 @@ public class HotelTest {
 
     @Test
     public void testCheckIn(){
-//        bedroom1.addGuest(guest);
-
         assertEquals(1, hotel.checkin());
 
+    }
+
+    @Test
+    public void testCheckNameofGuestInRoom(){
+        assertEquals("Rosemary", hotel.findGuestNameinRoom());
     }
 
 }
