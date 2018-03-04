@@ -11,13 +11,13 @@ public class HotelTest {
     Guest guest;
     Bedroom bedroom1;
     Bedroom bedroom2;
-//    Bedroom bedroom3;
     ArrayList<Bedroom> availableBedrooms;
     ArrayList<DiningRoom> diningRooms;
     DiningRoom diningRoomBuffet;
     DiningRoom fineDiningRoom;
-//    ArrayList<ConferenceRoom> conferenceRoom;
-//
+    ConferenceRoom boardRoom;
+    ArrayList<ConferenceRoom> conferenceRooms;
+
 
 
     @Before
@@ -33,8 +33,12 @@ public class HotelTest {
         diningRooms = new ArrayList<>();
         diningRooms.add(diningRoomBuffet);
         diningRooms.add(fineDiningRoom);
+        boardRoom = new ConferenceRoom(25, 50, 100);
+        conferenceRooms = new ArrayList<>();
+        conferenceRooms.add(boardRoom);
 
-        hotel = new Hotel(guest, bedroom1,availableBedrooms,fineDiningRoom, diningRooms);
+
+        hotel = new Hotel(guest, bedroom1,availableBedrooms,fineDiningRoom, diningRooms, boardRoom, conferenceRooms);
 
 
     }

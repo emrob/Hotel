@@ -6,20 +6,22 @@ public class Hotel {
     private ArrayList<Bedroom> availableBedrooms;
     private DiningRoom diningRoom;
     private ArrayList<DiningRoom> diningrooms;
-//    private ArrayList<ConferenceRoom> conferenceRooms;
+    private ConferenceRoom conferenceRoom;
+    private ArrayList<ConferenceRoom> conferenceRooms;
 
-    public Hotel(Guest guest, Bedroom bedroom, ArrayList<Bedroom> availableBedrooms, DiningRoom diningRoom, ArrayList<DiningRoom> diningRooms) {
+    public Hotel(Guest guest, Bedroom bedroom, ArrayList<Bedroom> availableBedrooms, DiningRoom diningRoom, ArrayList<DiningRoom> diningRooms, ConferenceRoom conferenceRoom, ArrayList<ConferenceRoom> conferenceRooms) {
 
         this.guest = guest;
         this.bedroom = bedroom;
         this.availableBedrooms = availableBedrooms;
         this.diningRoom = diningRoom;
         this.diningrooms = new ArrayList<DiningRoom>();
-//        this.conferenceRooms = new ArrayList<ConferenceRoom>();
-//    }
-
-
+        this.conferenceRoom = conferenceRoom;
+        this.conferenceRooms = new ArrayList<ConferenceRoom>();
     }
+
+
+
 
     public int availableBedRooms(){
        return availableBedrooms.size();
